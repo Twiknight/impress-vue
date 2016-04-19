@@ -12,12 +12,13 @@
 body {
   font-family: Helvetica, sans-serif;
   overflow: hidden;
+  background-color: #e0e0e0
 }
 
 #impress {
   position:absolute;
   box-sizing:border-box;
-  transition: all 3s ease;
+  transition: all 1s ease-in-out;
 }
 </style>
 

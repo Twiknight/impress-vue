@@ -1,0 +1,1 @@
+Don't you think that presentations given in __modern browsers__ shouldn't __copy the limits__ of 'classic' slide decks?

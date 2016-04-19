@@ -19,12 +19,16 @@ const mutations = {
     const current = state.currentIndex
     if (current < max_idx) {
       state.currentIndex = current + 1
+    } else {
+      state.currentIndex = 0
     }
   },
   PREVIOUS (state) {
     const current = state.currentIndex
     if (current > 0) {
       state.currentIndex = current - 1
+    } else {
+      state.currentIndex = state.slides.length - 1
     }
   },
   RESIZE (state) {

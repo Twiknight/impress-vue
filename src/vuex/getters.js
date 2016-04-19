@@ -1,7 +1,7 @@
 const emptyStr = ''
 
 export function slides (state) {
-  return state.slides.map((s) => {
+  return state.slides.map((s, idx) => {
     // tranlate
     const x = s.x || 0
     const y = s.y || 0
@@ -15,9 +15,15 @@ export function slides (state) {
     const size = s.scale || 1
     const _scale = size !== 1 ? `scale(${size})` : emptyStr
 
+    let opacity = 1
+    if (state.currentIndex !== state.slides.length - 1){
+      opacity = state.currentIndex === idx ? '1' : '0.3'
+    } 
+
     return {
       style: Object.assign({
-        transform: ['translateZ(0)', _location, _rotate, _scale].join(' ')
+        transform: ['translateZ(0)', _location, _rotate, _scale].join(' '),
+        opacity: opacity
       }, s.style),
       content: s.content || ''
     }
@@ -47,7 +53,7 @@ export function scene (state) {
   const size = active.scale || 1
   const compensation = Math.min(windowWidth / slideWidth,
                           windowHeight / slideHeight)
-  const _size = 1 / size * compensation
+  const _size = 1 / size * compensation * 0.8
   const _scale = _size !== 1 ? `scale(${_size})` : emptyStr
 
   return {
