@@ -22,7 +22,8 @@ const overviewConfig = {
     },
     get height () {
       return `${this._height}px`
-    }
+    },
+    zIndex: -1
   }
 }
 
