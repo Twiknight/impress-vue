@@ -24,10 +24,10 @@ npm run build
 
 ## TODOs
 
-[x] The `slides` folder is a mess, I'll make it cleaner later.
-[x] I don't like 3D slides... So 3D effects is not included, maybe to add later.
-[x] Now, `overview` need a implicit register. I'll make it a generated scene later.
-[x] Comments as doc.
+- [ ] The `slides` folder is a mess, I'll make it cleaner later.
+- [ ] I don't like 3D slides... So 3D effects is not included, maybe to add later.
+- [ ] Now, `overview` need a implicit register. I'll make it a generated scene later.
+- [ ] Comments as doc.
 
 ## license
 
