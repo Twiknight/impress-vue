@@ -1,9 +1,8 @@
 import bored from './bored.md'
-import stereotype from './stereotype.md'
-import vue from './vue.md'
 import limits from './limits.md'
 import stun from './stun.md'
 import impress from './impress.md'
+import description from './description.md'
 
 const overviewConfig = {
   x: 0,
@@ -51,8 +50,7 @@ const modernConfig = {
       return `${this._height}px`
     },
     fontSize: '48px',
-    lineHeight: '1.5',
-    textAlign: 'center'
+    lineHeight: '1.5'
   }
 }
 
@@ -90,10 +88,19 @@ const impressScene = Object.assign({content: impress},
     scale: 1.5
   }, modernConfig)
 
+const descriptionScene = Object.assign({content: description},
+  {
+    x: 550,
+    y: 1500,
+    rotate: 90,
+    scale: 1.5
+  }, modernConfig)
+
 export default [
   boredSlide,
   limitsSlide,
   stunSlide,
   impressScene,
+  descriptionScene,
   overViewScene
 ]
