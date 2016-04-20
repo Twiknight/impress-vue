@@ -16,9 +16,9 @@ export function slides (state) {
     const _scale = size !== 1 ? `scale(${size})` : emptyStr
 
     let opacity = 1
-    if (state.currentIndex !== state.slides.length - 1){
+    if (state.currentIndex !== state.slides.length - 1) {
       opacity = state.currentIndex === idx ? '1' : '0.3'
-    } 
+    }
 
     return {
       style: Object.assign({

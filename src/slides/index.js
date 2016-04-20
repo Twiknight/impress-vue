@@ -3,6 +3,9 @@ import limits from './limits.md'
 import stun from './stun.md'
 import impress from './impress.md'
 import description from './description.md'
+import but from './but.md'
+import easy from './easy.md'
+import vue from './vue.md'
 
 const overviewConfig = {
   x: 0,
@@ -96,11 +99,38 @@ const descriptionScene = Object.assign({content: description},
     scale: 1.5
   }, modernConfig)
 
+const butScene = Object.assign({content: but},
+  {
+    x: 1600,
+    y: 0,
+    rotate: -90,
+    scale: 1
+  }, modernConfig)
+
+const easyScene = Object.assign({content: easy},
+  {
+    x: 2000,
+    y: 900,
+    rotate: 180,
+    scale: 2
+  }, modernConfig)
+
+const vueScene = Object.assign({content: vue},
+  {
+    x: 2500,
+    y: 0,
+    rotate: -45,
+    scale: 1
+  }, modernConfig)
+
 export default [
   boredSlide,
   limitsSlide,
   stunSlide,
   impressScene,
   descriptionScene,
+  butScene,
+  easyScene,
+  vueScene,
   overViewScene
 ]
