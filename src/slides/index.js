@@ -7,6 +7,7 @@ import but from './but.md'
 import easy from './easy.md'
 import vue from './vue.md'
 import knowMore from './know_more.md'
+import img from './imagination.md'
 
 const overviewConfig = {
   x: 0,
@@ -14,7 +15,7 @@ const overviewConfig = {
   rotate: 0,
   scale: 1,
   style: {
-    _width: 6000,
+    _width: 4200,
     _height: 3000,
     get width () {
       return `${this._width}px`
@@ -132,6 +133,14 @@ const knowMoreScene = Object.assign({content: knowMore},
     scale: 2
   }, modernConfig)
 
+const imgScene = Object.assign({content: img},
+  {
+    x: 3500,
+    y: 1500,
+    rotate: 0,
+    scale: 1
+  }, modernConfig)
+
 export default [
   boredSlide,
   limitsSlide,
@@ -142,5 +151,6 @@ export default [
   easyScene,
   vueScene,
   knowMoreScene,
+  imgScene,
   overViewScene
 ]
