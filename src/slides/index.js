@@ -6,6 +6,7 @@ import description from './description.md'
 import but from './but.md'
 import easy from './easy.md'
 import vue from './vue.md'
+import knowMore from './know_more.md'
 
 const overviewConfig = {
   x: 0,
@@ -123,6 +124,14 @@ const vueScene = Object.assign({content: vue},
     scale: 1
   }, modernConfig)
 
+const knowMoreScene = Object.assign({content: knowMore},
+  {
+    x: 3300,
+    y: 800,
+    rotate: 45,
+    scale: 2
+  }, modernConfig)
+
 export default [
   boredSlide,
   limitsSlide,
@@ -132,5 +141,6 @@ export default [
   butScene,
   easyScene,
   vueScene,
+  knowMoreScene,
   overViewScene
 ]
