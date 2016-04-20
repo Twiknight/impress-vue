@@ -1,6 +1,6 @@
 # impress-vue
 
-> A Vue.js project
+Re-invented impress.js with vue. :simley
 
 ## Build Setup
 
@@ -15,4 +15,20 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Add a new scene
+
+1. Go to the `/src/slides` folder
+2. Add your own scene with markdown
+3. Edit `slides/index.js` to config your scene
+4. build and run the site 
+
+## TODOs
+
+[x] The `slides` folder is a mess, I'll make it cleaner later.
+[x] I don't like 3D slides... So 3D effects is not included, maybe to add later.
+[x] Now, `overview` need a implicit register. I'll make it a generated scene later.
+[x] Comments as doc.
+
+## license
+
+MIT
