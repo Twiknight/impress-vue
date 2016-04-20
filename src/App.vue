@@ -6,6 +6,9 @@
       :content = "slide.content"
     ></slide>
   </div>
+  <div id="prompt" v-show="prompt">
+    <p>Use Arrow keys to navigate</p>
+  </div>
 </template>
 
 <style>
@@ -19,6 +22,23 @@ body {
   position:absolute;
   box-sizing:border-box;
   transition: all 1s ease-in-out;
+}
+
+a:link{
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+a:visited{
+  color: black;
+}
+
+#prompt{
+  font-size: 48px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.15)
 }
 </style>
 
@@ -40,6 +60,11 @@ export default {
       resize: resize
     }
   },
+  data() {
+    return {
+      prompt: true
+    }
+  },
   components: {
     slide
   },
@@ -48,17 +73,21 @@ export default {
     const vm = this;
     window.addEventListener('resize', () => vm.resize())
     document.addEventListener('keydown', (e) => {
+      if (this.prompt) {
+        this.prompt = false
+      }
       switch(e.keyCode){
         case 37:
+        case 38:
             vm.prev()
             e.preventDefault()
             break
         case 39:
+        case 40:
             vm.next()
             e.preventDefault()
             break
         default:
-            console.log('other keys: ' + e.keyCode)
             return
       }
     })

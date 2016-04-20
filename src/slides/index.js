@@ -15,7 +15,7 @@ const overviewConfig = {
   rotate: 0,
   scale: 1,
   style: {
-    _width: 4200,
+    _width: 4300,
     _height: 3000,
     get width () {
       return `${this._width}px`
