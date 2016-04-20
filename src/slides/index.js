@@ -3,6 +3,7 @@ import stereotype from './stereotype.md'
 import vue from './vue.md'
 import limits from './limits.md'
 import stun from './stun.md'
+import impress from './impress.md'
 
 const overviewConfig = {
   x: 0,
@@ -13,10 +14,10 @@ const overviewConfig = {
     _width: 6000,
     _height: 3000,
     get width () {
-      return this._width
+      return `${this._width}px`
     },
     get height () {
-      return this._height
+      return `${this._height}px`
     }
   }
 }
@@ -39,6 +40,22 @@ const classicConfig = {
   }
 }
 
+const modernConfig = {
+  style: {
+    _width: 900,
+    get width () {
+      return `${this._width}px`
+    },
+    _height: 700,
+    get height () {
+      return `${this._height}px`
+    },
+    fontSize: '48px',
+    lineHeight: '1.5',
+    textAlign: 'center'
+  }
+}
+
 const overViewScene = Object.assign({content: ''}, overviewConfig)
 
 const boredSlide = Object.assign({content: bored},
@@ -55,8 +72,7 @@ const limitsSlide = Object.assign({content: limits},
     y: 0,
     rotate: 0,
     scale: 0.5
-  }, classicConfig
-)
+  }, classicConfig)
 
 const stunSlide = Object.assign({content: stun},
   {
@@ -64,12 +80,20 @@ const stunSlide = Object.assign({content: stun},
     y: 0,
     rotate: 0,
     scale: 0.5
-  }, classicConfig
-)
+  }, classicConfig)
+
+const impressScene = Object.assign({content: impress},
+  {
+    x: 485,
+    y: 700,
+    rotate: 0,
+    scale: 1.5
+  }, modernConfig)
 
 export default [
   boredSlide,
   limitsSlide,
   stunSlide,
+  impressScene,
   overViewScene
 ]
