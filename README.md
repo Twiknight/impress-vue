@@ -1,6 +1,6 @@
 # impress-vue
 
-Re-invented impress.js with vue. :simley
+Re-invented impress.js with vue.  :smiley
 
 ## Build Setup
 
