@@ -1,3 +1,3 @@
 Want to know more?
 
-see the __source__ !
+see the __[source](https://github.com/twiknight/impress-vue)__ !

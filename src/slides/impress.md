@@ -1,3 +1,3 @@
 maybe you have already tried
 
-# impress.js
+# [impress.js](https://github.com/impress/impress.js)
